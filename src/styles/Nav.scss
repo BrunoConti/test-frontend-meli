@@ -1,0 +1,34 @@
+.nav--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--yellow-meli);
+  padding: 5px;
+
+  a {
+    padding: 0 35px 0 0;
+  }
+
+  form {
+    display: contents;
+    height: 80%;
+
+    input {
+      width: 70%;
+      font-size: 18px;
+      text-indent: 10px;
+      border: 1px solid #cfcfcf;
+      border-radius: 5px 0 0 5px;
+    }
+    input:focus {
+      outline: none;
+    }
+    button {
+      width: 40px;
+      border-radius: 0 5px 5px 0;
+      border: 1px solid #cfcfcf;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

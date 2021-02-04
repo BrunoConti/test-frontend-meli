@@ -1,0 +1,45 @@
+.items--container {
+  column-gap: 16px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.item--container {
+  display: grid;
+  grid-template-columns: 20% 65% 15%;
+  border-bottom: 1px solid var(--light-grey-meli);
+  margin-top: 16px;
+
+  .item--image {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    margin-left: 16px;
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 4px;
+    }
+  }
+
+  .item--content-price {
+    font-size: 24px;
+    margin-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .item--content-title {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--black-meli);
+  }
+
+  .item--location {
+    margin-top: 32px;
+    color: var(--dark-grey-meli);
+    font-size: 12px;
+  }
+}
