@@ -8,9 +8,8 @@ const Items = () => {
 
   useEffect(() => {
     let asyncGetItems = async () => {
-      const { data } = await ApiRequest.get(`/items`, { q: "autos" });
+      const { data } = await ApiRequest.get(`/items`, { q: "celulares" });
       setItems(data);
-      console.log("data", data);
     };
     asyncGetItems();
   }, []);
