@@ -1,5 +1,4 @@
 .items--container {
-  column-gap: 16px;
   width: 80%;
   margin-left: 10%;
   background-color: white;
@@ -9,6 +8,7 @@
 .item--container {
   display: grid;
   grid-template-columns: 20% 65% 15%;
+  column-gap: 0;
   border-bottom: 1px solid var(--light-grey-meli);
   margin-top: 16px;
 
@@ -17,6 +17,7 @@
     height: 180px;
     border-radius: 4px;
     margin-left: 16px;
+    margin-bottom: 16px;
 
     img {
       width: 180px;
@@ -29,6 +30,12 @@
     font-size: 24px;
     margin-top: 32px;
     padding-bottom: 24px;
+    sup {
+      font-size: 11px;
+    }
+    img {
+      margin-left: 10px;
+    }
   }
 
   .item--content-title {

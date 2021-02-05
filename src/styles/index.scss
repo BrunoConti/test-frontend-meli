@@ -1,6 +1,7 @@
 @import "./Nav.scss";
 @import "./Breadcrumb.scss";
 @import "./Item.scss";
+@import "./ItemDetail.scss";
 
 body {
   background-color: #ebebeb;
@@ -8,6 +9,7 @@ body {
   --black-meli: #333333;
   --dark-grey-meli: #999999;
   --light-grey-meli: #eeeeee;
+  --blue-meli: #3483fa;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
