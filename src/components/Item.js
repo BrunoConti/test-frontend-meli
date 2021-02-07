@@ -1,8 +1,12 @@
 import React from "react";
 import currencyFormat from "../utils/currencyFormat";
 import LogoFreeshipping from "../assets/Logo_Shipping.png";
+import { useTranslation } from "react-i18next";
 
 const Item = ({ item }) => {
+  const { t } = useTranslation();
+
+  console.log("item.decimals", item.decimals);
   return (
     <div className="item--container">
       <a href={`items/${item.id}`} className="item--image">
@@ -10,17 +14,16 @@ const Item = ({ item }) => {
       </a>
       <div className="item--content">
         <div className="item--content-price">
-          {item.price.currency} {currencyFormat(item.price.amount)}
-          {item.decimals > 0 && <sup>{item.price.decimals}</sup>}
+          {t(item.price.currency)} {currencyFormat(item.price.amount)}
           {item.free_shipping && (
-            <img src={LogoFreeshipping} alt="Envío gratis" />
+            <img src={LogoFreeshipping} alt={t("Free Shipping")} />
           )}
         </div>
         <a className="item--content-title" href={`items/${item.id}`}>
           {item.title}
         </a>
       </div>
-      <div className="item--location">{item.condition}</div>
+      <div className="item--location">{t(item.condition)}</div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Layout from "../../containers/Layout";
 import ApiRequest from "../../utils/ApiRequest";
 import currencyFormat from "../../utils/currencyFormat";
@@ -7,6 +8,7 @@ import currencyFormat from "../../utils/currencyFormat";
 const ItemDetail = () => {
   const [item, setItem] = useState();
   let { id } = useParams();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const asyncGetItemDetail = async () => {
@@ -30,11 +32,11 @@ const ItemDetail = () => {
 
             <div className="itemDetail--content">
               <div className="itemDetail--content-condition">
-                {item.condition} - x vendidos
+                {t(item.condition)} - {item.sold_quantity} vendidos
               </div>
               <div className="itemDetail--content-title">{item.title}</div>
               <div className="itemDetail--content-price">
-                {item.price.currency} {currencyFormat(item.price.amount)}
+                {t(item.price.currency)} {currencyFormat(item.price.amount)}
                 {item.price.decimals > 0 ? (
                   <sup>{item.price.decimals}</sup>
                 ) : (

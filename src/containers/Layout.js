@@ -6,7 +6,7 @@ const Layout = (props) => {
   return (
     <>
       {props.nav && <Nav />}
-      {props.breadcrumb && <Breadcrumb />}
+      {props.breadcrumb && <Breadcrumb categories={props.categories} />}
       {props.children}
     </>
   );
