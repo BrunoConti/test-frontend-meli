@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 const Item = ({ item }) => {
   const { t } = useTranslation();
 
-  console.log("item.decimals", item.decimals);
   return (
     <div className="item--container">
       <a href={`items/${item.id}`} className="item--image">

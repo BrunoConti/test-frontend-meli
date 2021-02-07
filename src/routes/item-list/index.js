@@ -12,8 +12,6 @@ const Items = () => {
   useEffect(() => {
     let asyncGetItems = async () => {
       const { data } = await ApiRequest.get(`/items`, { q: search });
-      console.log("data categories", data.categories);
-      console.log("localStorage", localStorage);
       localStorage.setItem("categories", JSON.stringify(data.categories));
       setItems(data.items);
     };

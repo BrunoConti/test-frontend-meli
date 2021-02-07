@@ -13,7 +13,6 @@ const ItemDetail = () => {
   useEffect(() => {
     const asyncGetItemDetail = async () => {
       let { data } = await ApiRequest.get(`items/${id}`);
-      console.log("data", data);
       setItem(data.item);
     };
     asyncGetItemDetail();
@@ -29,7 +28,6 @@ const ItemDetail = () => {
               alt={item.title}
               className="itemDetail--image"
             />
-
             <div className="itemDetail--content">
               <div className="itemDetail--content-condition">
                 {t(item.condition)} - {item.sold_quantity} vendidos
