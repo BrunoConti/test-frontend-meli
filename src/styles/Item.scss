@@ -7,10 +7,11 @@
 
 .item--container {
   display: grid;
-  grid-template-columns: 20% 65% 15%;
+  grid-template-columns: 18% 67% 15%;
   column-gap: 0;
   border-bottom: 1px solid var(--light-grey-meli);
   margin-top: 16px;
+  margin-bottom: 5%;
 
   .item--image {
     width: 180px;
