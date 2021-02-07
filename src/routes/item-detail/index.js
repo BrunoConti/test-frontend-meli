@@ -22,7 +22,7 @@ const ItemDetail = () => {
   return (
     <Layout nav breadcrumb>
       {item ? (
-        <div className="itemDetail--container">
+        <section className="itemDetail--container">
           <div className="itemDetail--main">
             <img
               src={item.picture}
@@ -52,11 +52,12 @@ const ItemDetail = () => {
             <div className="itemDetail--description-title">
               Descripción del producto
             </div>
-            <div className="itemDetail--description-text">
-              {item.description}
-            </div>
+            <div
+              className="itemDetail--description-text"
+              dangerouslySetInnerHTML={{ __html: item.description }}
+            ></div>
           </div>
-        </div>
+        </section>
       ) : null}
     </Layout>
   );

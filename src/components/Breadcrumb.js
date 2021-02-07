@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Breadcrumb = () => {
-  const [categories] = useState(
-    JSON.parse(localStorage.getItem("categories")) || []
-  );
+  const categories = JSON.parse(localStorage.getItem("categories")) || [];
   console.log("categories", categories);
   return (
     <div className="breadcrumb--container">

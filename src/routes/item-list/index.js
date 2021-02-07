@@ -14,19 +14,19 @@ const Items = () => {
       const { data } = await ApiRequest.get(`/items`, { q: search });
       console.log("data categories", data.categories);
       console.log("localStorage", localStorage);
-      setItems(data.items);
       localStorage.setItem("categories", JSON.stringify(data.categories));
+      setItems(data.items);
     };
     asyncGetItems();
   }, [search]);
 
   return (
     <Layout nav breadcrumb>
-      <div className="items--container">
+      <section className="items--container">
         {items?.map((item) => {
           return <Item key={item.id} item={item} />;
         })}
-      </div>
+      </section>
     </Layout>
   );
 };

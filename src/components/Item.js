@@ -23,7 +23,7 @@ const Item = ({ item }) => {
           {item.title}
         </a>
       </div>
-      <div className="item--location">{t(item.condition)}</div>
+      <div className="item--location">{t(item.address)}</div>
     </div>
   );
 };
