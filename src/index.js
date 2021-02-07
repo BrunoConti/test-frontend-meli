@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.scss";
 import App from "./routes";
+import "./i18n";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
