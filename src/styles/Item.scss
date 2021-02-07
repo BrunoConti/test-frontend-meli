@@ -1,8 +1,10 @@
 .items--container {
   width: 80%;
   margin-left: 10%;
+  margin-bottom: 5%;
   background-color: white;
   border-radius: 4px;
+  padding-top: 5px;
 }
 
 .item--container {
@@ -10,8 +12,7 @@
   grid-template-columns: 18% 67% 15%;
   column-gap: 0;
   border-bottom: 1px solid var(--light-grey-meli);
-  margin-top: 16px;
-  margin-bottom: 5%;
+  margin: 16px 16px 0 16px;
 
   .item--image {
     width: 180px;
